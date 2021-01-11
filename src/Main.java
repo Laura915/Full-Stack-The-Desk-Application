@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -67,6 +68,7 @@ public class Main {
                         break;
                     case 4:
                         sortExpenses(expenses);
+                    	System.out.println("Expenses sorted\t");
                         optionsSelection();
                         break;
                     case 5:
@@ -106,5 +108,6 @@ public class Main {
     private static void sortExpenses(ArrayList<Integer> arrayList) {
         int arrlength =  arrayList.size();
        //Complete the method. The expenses should be sorted in ascending order.
+        Collections.sort(arrayList);
     }
 }
