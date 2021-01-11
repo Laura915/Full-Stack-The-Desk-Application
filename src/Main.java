@@ -88,6 +88,7 @@ public class Main {
     }
     private static void closeApp() {
         System.out.println("Closing your application... \nThank you!");
+        System.exit(0);
             }
     private static void searchExpenses(ArrayList<Integer> arrayList, Integer searchEl) {
         int leng = arrayList.size();
