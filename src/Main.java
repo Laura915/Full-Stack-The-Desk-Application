@@ -70,7 +70,9 @@ public class Main {
                         optionsSelection();
                         break;
                     case 5:
-                        searchExpenses(expenses);
+                    	System.out.println("Enter the expense you need to search:\t");
+                    	int searchEl = sc.nextInt();
+                        searchExpenses(expenses, searchEl);
                         optionsSelection();
                         break;
                     case 6:
@@ -85,10 +87,20 @@ public class Main {
     private static void closeApp() {
         System.out.println("Closing your application... \nThank you!");
             }
-    private static void searchExpenses(ArrayList<Integer> arrayList) {
+    private static void searchExpenses(ArrayList<Integer> arrayList, Integer searchEl) {
         int leng = arrayList.size();
-        System.out.println("Enter the expense you need to search:\t");
         //Complete the method
+        boolean foundEl = false;
+        for (int expense : arrayList) {
+        	if (expense == searchEl) {
+        		foundEl= true;
+            } 
+        }
+           
+        if(foundEl) {
+        	System.out.println("Found expense " + searchEl);
+        } 
+        System.out.println("Could not Find expense " + searchEl);   
         
     }
     private static void sortExpenses(ArrayList<Integer> arrayList) {
